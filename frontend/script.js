@@ -47,10 +47,36 @@ form.addEventListener("submit", function() {
     formData.append("price", price.value);
 
     fetch("http://localhost:8000/create", {
-        method: "GET",
+        method: "POST",
         body: formData
     })
     .then(res => res.json())
     .catch(err => console.error(err));
+    
 });
 
+container.addEventListener("click", async(event) => {
+
+    const deleteBtn = event.target.closest(".delete-button");
+    const editBtn = event.target.closest(".edit-button");
+    if(!deleteBtn || editBtn) return;
+
+    if(deleteBtn){
+        const card = deleteBtn.closest(".medicine-card");
+        const name = card.querySelector("h3").textContent;
+
+        const deleteData = new FormData();
+        deleteData.append("name", name)
+
+        const res = await fetch(`http://localhost:8000/delete`,{
+            method: "DELETE",
+            body: deleteData
+        });
+        
+        const result = await res.json();
+
+        if(result.message){
+            card.remove();
+        }
+    }
+})

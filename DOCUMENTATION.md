@@ -13,6 +13,10 @@
 ## Problems Faced
 *Use this space to document and discuss any issues you faced while undertaking this challenge and how you solved them. We recommend doing this proactively as you experience and resolve the issues - make sure you don't forget! (Screenshots are helpful, though not required)*.
 
+each of the medicine cards i created had its own dlete and edit button, i struggled on how to ensure the program know which medicine the delete button belonged to. the issue is that to get access to teh delete button there needs to intially be something but it only renders later so it doesnt kniw what it access so it has a value of null. 
+
+after researching i realised instead of looking for each delete button individually you can Put one single event listener on the parent container that already exists in the DOM. that way i didnt have to repeat logic for a dleete button and edit button separately i just used a conditional to see where the click was. 
+
 ## Evaluation
 *How did you feel about the challenge overall? Did some parts go better than others? Did you run out of time? If you were to do this again, and were given more time, what would you do differently?*
 

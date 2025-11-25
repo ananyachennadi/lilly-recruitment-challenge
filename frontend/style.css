@@ -73,10 +73,13 @@ h1{
     margin: 0;
 }
 
-.form-div,.average-price, .medicine-div{
+.form-div,.average-price, .medicine-card{
     background-color: #ffffff;
     border-radius: 6px;
     padding: 14px;
+}
+
+.form-div,.average-price{
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -143,4 +146,21 @@ h1{
     cursor: pointer;
     background-color:rgb(182, 0, 0);
     transition:50ms;
+}
+
+.medicine-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.medicine-buttons{
+    display: flex;
+    justify-content:space-between;
+}
+
+.medicine-name{
+    padding: 0;
 }

@@ -15,3 +15,5 @@
 
 ## Evaluation
 *How did you feel about the challenge overall? Did some parts go better than others? Did you run out of time? If you were to do this again, and were given more time, what would you do differently?*
+
+If i had more time i would implement a different way that the unknown values are shown for future edits or adjustments
